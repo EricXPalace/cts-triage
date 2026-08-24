@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Result start="1756000000000" end="1756003600000" suite_name="CTS" suite_version="15_r1" suite_plan="cts" suite_build_number="BP1A.240201.002" report_version="5.0" command_line_args="run cts" devices="SYNTH0001" host_name="fixture">
+  <Build build_fingerprint="google/synth/synth:15/BP1A.240201.002/user-keys" build_device="synth" build_id="BP1A.240201.002" build_abis="arm64-v8a,armeabi-v7a" />
+  <Summary pass="7" failed="9" modules_done="5" modules_total="6" />
+  <Module name="CtsMediaTestCases" abi="arm64-v8a" device="SYNTH0001" runtime="32000" done="true" pass="1">
+    <TestCase name="android.cts.DecoderTest">
+      <Test result="IGNORED" name="testAv1Decode" />
+      <Test result="fail" name="testHevcDecode">
+        <Failure message="expected:&amp;lt;true&amp;gt; but was:&amp;lt;false&amp;gt; (testHevcDecode)">
+          <StackTrace>junit.framework.AssertionFailedError
+	at android.cts.DecoderTest.testHevcDecode(SourceFile:1)
+	at java.lang.reflect.Method.invoke(Native Method)</StackTrace>
+        </Failure>
+      </Test>
+      <Test result="pass" name="testVp9Decode" />
+    </TestCase>
+    <TestCase name="android.cts.EncoderTest">
+      <Test result="fail" name="testAacEncode">
+        <Failure message="expected:&amp;lt;true&amp;gt; but was:&amp;lt;false&amp;gt; (testAacEncode)">
+          <StackTrace>junit.framework.AssertionFailedError
+	at android.cts.EncoderTest.testAacEncode(SourceFile:1)
+	at java.lang.reflect.Method.invoke(Native Method)</StackTrace>
+        </Failure>
+      </Test>
+      <Test result="ASSUMPTION_FAILURE" name="testHwOnly" />
+    </TestCase>
+  </Module>
+  <Module name="CtsNativeTestCases" abi="arm64-v8a" device="SYNTH0001" runtime="31000" done="true" pass="1">
+    <TestCase name="android.cts.JniTest">
+      <Test result="pass" name="testPointerWidth" />
+    </TestCase>
+  </Module>
+  <Module name="CtsNativeTestCases" abi="armeabi-v7a" device="SYNTH0001" runtime="31000" done="true" pass="0">
+    <TestCase name="android.cts.JniTest">
+      <Test result="fail" name="testPointerWidth">
+        <Failure message="expected:&amp;lt;true&amp;gt; but was:&amp;lt;false&amp;gt; (testPointerWidth)">
+          <StackTrace>junit.framework.AssertionFailedError
+	at android.cts.JniTest.testPointerWidth(SourceFile:1)
+	at java.lang.reflect.Method.invoke(Native Method)</StackTrace>
+        </Failure>
+      </Test>
+    </TestCase>
+  </Module>
+  <Module name="CtsSecurityTestCases" abi="arm64-v8a" device="SYNTH0001" runtime="31000" done="false" pass="0">
+    <Reason message="Device did not respond after 3 attempts" />
+    <TestCase name="android.cts.SELinuxTest">
+      <Test result="fail" name="testDomainLabels">
+        <Failure message="expected:&amp;lt;true&amp;gt; but was:&amp;lt;false&amp;gt; (testDomainLabels)">
+          <StackTrace>junit.framework.AssertionFailedError
+	at android.cts.SELinuxTest.testDomainLabels(SourceFile:1)
+	at java.lang.reflect.Method.invoke(Native Method)</StackTrace>
+        </Failure>
+      </Test>
+      <Test result="fail" name="testNewPolicyRule">
+        <Failure message="expected:&amp;lt;true&amp;gt; but was:&amp;lt;false&amp;gt; (testNewPolicyRule)">
+          <StackTrace>junit.framework.AssertionFailedError
+	at android.cts.SELinuxTest.testNewPolicyRule(SourceFile:1)
+	at java.lang.reflect.Method.invoke(Native Method)</StackTrace>
+        </Failure>
+      </Test>
+      <Test result="fail" name="testPolicyLoaded">
+        <Failure message="expected:&amp;lt;true&amp;gt; but was:&amp;lt;false&amp;gt; (testPolicyLoaded)">
+          <StackTrace>junit.framework.AssertionFailedError
+	at android.cts.SELinuxTest.testPolicyLoaded(SourceFile:1)
+	at java.lang.reflect.Method.invoke(Native Method)</StackTrace>
+        </Failure>
+      </Test>
+    </TestCase>
+  </Module>
+  <Module name="CtsWidgetTestCases" abi="arm64-v8a" device="SYNTH0001" runtime="33000" done="true" pass="4">
+    <TestCase name="android.cts.ButtonTest">
+      <Test result="fail" name="testAccessibility">
+        <Failure message="expected:&amp;lt;true&amp;gt; but was:&amp;lt;false&amp;gt; (testAccessibility)">
+          <StackTrace>junit.framework.AssertionFailedError
+	at android.cts.ButtonTest.testAccessibility(SourceFile:1)
+	at java.lang.reflect.Method.invoke(Native Method)</StackTrace>
+        </Failure>
+      </Test>
+      <Test result="pass" name="testOnClick" />
+      <Test result="pass" name="testSetText" />
+      <Test result="pass" name="testTooltip" />
+    </TestCase>
+    <TestCase name="android.cts.ScrollViewTest">
+      <Test result="fail" name="testFling">
+        <Failure message="expected:&amp;lt;true&amp;gt; but was:&amp;lt;false&amp;gt; (testFling)">
+          <StackTrace>junit.framework.AssertionFailedError
+	at android.cts.ScrollViewTest.testFling(SourceFile:1)
+	at java.lang.reflect.Method.invoke(Native Method)</StackTrace>
+        </Failure>
+      </Test>
+    </TestCase>
+    <TestCase name="android.cts.TextViewTest">
+      <Test result="pass" name="testGravity" />
+      <Test result="fail" name="testSetTypeface">
+        <Failure message="expected:&amp;lt;true&amp;gt; but was:&amp;lt;false&amp;gt; (testSetTypeface)">
+          <StackTrace>junit.framework.AssertionFailedError
+	at android.cts.TextViewTest.testSetTypeface(SourceFile:1)
+	at java.lang.reflect.Method.invoke(Native Method)</StackTrace>
+        </Failure>
+      </Test>
+    </TestCase>
+  </Module>
+  <Module name="CtsWidgetTestCases" abi="armeabi-v7a" device="SYNTH0001" runtime="31000" done="true" pass="1">
+    <TestCase name="android.cts.ButtonTest">
+      <Test result="pass" name="testSetText" />
+    </TestCase>
+  </Module>
+</Result>

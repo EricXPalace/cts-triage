@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Result start="1756000000000" end="1756003600000" suite_name="CTS" suite_version="15_r1" suite_plan="cts" suite_build_number="BP1A.240101.001" report_version="5.0" command_line_args="run cts" devices="SYNTH0001" host_name="fixture">
+  <Build build_fingerprint="google/synth/synth:15/BP1A.240101.001/user-keys" build_device="synth" build_id="BP1A.240101.001" build_abis="arm64-v8a,armeabi-v7a" />
+  <Summary pass="12" failed="2" modules_done="6" modules_total="6" />
+  <Module name="CtsMediaTestCases" abi="arm64-v8a" device="SYNTH0001" runtime="32000" done="true" pass="1">
+    <TestCase name="android.cts.DecoderTest">
+      <Test result="IGNORED" name="testAv1Decode" />
+      <Test result="pass" name="testHevcDecode" />
+      <Test result="fail" name="testVp9Decode">
+        <Failure message="expected:&amp;lt;true&amp;gt; but was:&amp;lt;false&amp;gt; (testVp9Decode)">
+          <StackTrace>junit.framework.AssertionFailedError
+	at android.cts.DecoderTest.testVp9Decode(SourceFile:1)
+	at java.lang.reflect.Method.invoke(Native Method)</StackTrace>
+        </Failure>
+      </Test>
+    </TestCase>
+    <TestCase name="android.cts.EncoderTest">
+      <Test result="fail" name="testAacEncode">
+        <Failure message="expected:&amp;lt;true&amp;gt; but was:&amp;lt;false&amp;gt; (testAacEncode)">
+          <StackTrace>junit.framework.AssertionFailedError
+	at android.cts.EncoderTest.testAacEncode(SourceFile:1)
+	at java.lang.reflect.Method.invoke(Native Method)</StackTrace>
+        </Failure>
+      </Test>
+      <Test result="ASSUMPTION_FAILURE" name="testHwOnly" />
+    </TestCase>
+  </Module>
+  <Module name="CtsNativeTestCases" abi="arm64-v8a" device="SYNTH0001" runtime="31000" done="true" pass="1">
+    <TestCase name="android.cts.JniTest">
+      <Test result="pass" name="testPointerWidth" />
+    </TestCase>
+  </Module>
+  <Module name="CtsNativeTestCases" abi="armeabi-v7a" device="SYNTH0001" runtime="31000" done="true" pass="1">
+    <TestCase name="android.cts.JniTest">
+      <Test result="pass" name="testPointerWidth" />
+    </TestCase>
+  </Module>
+  <Module name="CtsSecurityTestCases" abi="arm64-v8a" device="SYNTH0001" runtime="31000" done="true" pass="2">
+    <TestCase name="android.cts.SELinuxTest">
+      <Test result="pass" name="testDomainLabels" />
+      <Test result="pass" name="testPolicyLoaded" />
+    </TestCase>
+  </Module>
+  <Module name="CtsWidgetTestCases" abi="arm64-v8a" device="SYNTH0001" runtime="33000" done="true" pass="6">
+    <TestCase name="android.cts.ButtonTest">
+      <Test result="pass" name="testOnClick" />
+      <Test result="pass" name="testSetText" />
+    </TestCase>
+    <TestCase name="android.cts.ScrollViewTest">
+      <Test result="pass" name="testFling" />
+    </TestCase>
+    <TestCase name="android.cts.TextViewTest">
+      <Test result="pass" name="testDeprecatedApi" />
+      <Test result="pass" name="testGravity" />
+      <Test result="pass" name="testSetTypeface" />
+    </TestCase>
+  </Module>
+  <Module name="CtsWidgetTestCases" abi="armeabi-v7a" device="SYNTH0001" runtime="31000" done="true" pass="1">
+    <TestCase name="android.cts.ButtonTest">
+      <Test result="pass" name="testSetText" />
+    </TestCase>
+  </Module>
+</Result>
